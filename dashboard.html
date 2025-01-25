@@ -6,34 +6,34 @@
     <title>Dashboard Ulva Khairunnisya</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-         body {
-        font-family: Arial, sans-serif;
-        background-color: #E6E6FA;  
-        background-image: url('bg1.jpg'); /* Ganti dengan path gambar Anda */
-        background-size: cover; /* Mengatur ukuran gambar agar menutupi seluruh area */
-        background-position: center; /* Memusatkan gambar */
-        background-repeat: no-repeat; /* Mencegah gambar diulang */
-        margin: 0;
-        padding: 0;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E6E6FA;
+            background-image: url('bg1.jpg'); /* Pastikan file ini ada */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
         }
-        .logout-btn {
 
-    background-color: #ff6b6b;
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-top: 10px; 
-    margin-left: auto;
-    margin-right: auto;
-    display: block; 
-    width: fit-content; 
-}
+        .logout-btn {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin: 20px auto 0;
+            display: block;
+            width: fit-content;
+            font-weight: bold;
+        }
+
         .logout-btn:hover {
             background-color: #ee5253;
         }
-        /* Existing styles remain the same */
+
         .colorful-marquee {
             width: 100%;
             background: linear-gradient(to right, #ff6b6b, #4ecdc4, #45b7d1, #ff9ff3, #6a5acd);
@@ -43,36 +43,41 @@
             font-size: 25px;
             font-weight: bold;
         }
+
         .biodata-container {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             background-color: #fff;
-            padding: 40px;
+            padding: 20px;
             max-width: 800px;
             margin: 20px auto;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         .biodata-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex: 1 1 300px;
+            text-align: center;
+            padding: 10px;
         }
+
         .biodata-text {
-            max-width: 400px;
             text-align: left;
         }
+
         .image-container {
-            flex: 0 0 250px;
+            flex: 1 1 250px;
             display: flex;
             justify-content: center;
-            align-items: center;
+            padding: 10px;
         }
+
         img {
             max-width: 100%;
             border-radius: 10px;
         }
+
         .social-link {
             display: flex;
             align-items: center;
@@ -80,27 +85,32 @@
             text-decoration: none;
             color: #0066cc;
         }
+
         .social-link i {
             margin-right: 10px;
             font-size: 24px;
         }
+
         .exercises-container {
             background-color: #fff;
-            padding: 40px;
+            padding: 20px;
             max-width: 800px;
             margin: 20px auto;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         .exercises-title {
             text-align: center;
             margin-bottom: 20px;
         }
+
         .latihan-exercises {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 10px;
         }
+
         .exercise-card {
             background-color: #f9f9f9;
             border: 1px solid #e0e0e0;
@@ -109,10 +119,12 @@
             text-align: center;
             transition: transform 0.3s ease;
         }
+
         .exercise-card:hover {
             transform: scale(1.05);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         .exercise-card a {
             text-decoration: none;
             color: #333;
@@ -121,14 +133,12 @@
     </style>
 </head>
 <body>
-    <audio autoplay loop>
+    <audio autoplay muted loop>
         <source src="song.mp3" type="audio/mpeg">
     </audio>
 
     <div class="colorful-marquee">
-        <marquee behavior="scroll" direction="left">
-            <span>WELCOME TO MY WEBSITE</span>
-        </marquee>
+        <marquee behavior="scroll" direction="left">WELCOME TO MY WEBSITE</marquee>
     </div>
 
     <div class="biodata-container">
@@ -170,12 +180,10 @@
             <div class="exercise-card">
                 <a href="volumekubus.html">Volume Kubus</a>
             </div>
-            <a href="index.html" class="logout-btn">
-                <i class="fas fa-sign-out-alt"></i> Logout
-            </a>
         </div>
-        
+        <a href="index.html" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
     </div>
-    
 </body>
 </html>
